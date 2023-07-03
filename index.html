@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las tortas más ricas y sabrosas de Mendoza, elaboradas con productos de primera calidad. Si estas pensando en una fiesta o evento, tenemos la torta que necesitas.">
+  <meta name="keywords" content="pasteleria, tortas, pasteles, torta, torta torta, tortas tortas, pasteleria tortas de cumpleaños, pastelería tortas, pastelero pastelero, pasteleria o pastelería, pasteleria y reposteria son lo mismo, receta de torta torta torta, una torta una torta, tortas tortas de tik tok, tortas tortas los mochis, tortas tortas de cumpleaños, tortas locas tortas, tortas decoradas, tortas forradas, tortas en crema, tortas de unicornio tortas de unicornio, tortas para niñas tortas para niñas, tortas para niñas tortas para niños, tortas para bebes, torta torta al cioccolato, tortas de barbie tortas de barbie, tortas tortas caseras, chocotorta, tortas tortas de aceite, torta torta de chocolate, torta torta de sonic, torta torta de mickey, tortas fotos de tortas, tortas en fondant">
+  <title>Belén Paileman - Inicio</title>
+  <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/sweetslert.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  
+</head>
+
+
+
+<body>  
+
+  <header>
+    <nav class="navbar navbar-expand-lg fpy-0 fixed-top">
+      <div class="container-fluid">                  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="">Productos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="">Contacto</a>
+            </li>
+            
+          </ul>
+
+        </div>
+        <!-- <a class="navbar-brand" href="../index.html">
+        <img class="logo navbar-brand" src="./media/Belén Paileman logo.png" alt="Belén Paileman logo">
+      </a> -->
+      <button id="boton-carrito"><i class='bx bxs-shopping-bag'></i><span id="contadorCarrito">0</span></button>
+      
+      </div>
+    </nav>
+    
+    
+    
+  </header>
+
+  
+
+
+<main>
+  <h1>Belén Paileman</h1>
+  <h2>Pastelería</h2>
+  <div class="row">
+    <div class="col-4">      
+      <form class="d-flex" role="search">
+        <input class="form-control me-6 buscar" type="search" placeholder="Producto" aria-label="Search">
+        <button class="btn bx bx-search" type="submit"></button>
+      </form>
+    </div>
+    
+    
+  </div>
+
+  
+  <section id="contenedor-productos">
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+          <h3>Tu carrito</h3>
+          <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+          <div id="carrito-contenedor">
+             
+          </div>
+          <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+          <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+          <button id="confirmar-compra" class="boton-confirmar">Confirmar compra</button>
+      </div>
+  </div>
+  </section>
+
+
+  <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pronto recibirás tu pedido</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+
+
+
+ <footer>
+
+
+
+  <div class="credits">
+    <p> Desarrollado por <strong><span>Nestor Llanos </span></strong> &copy; Copyright <strong><span>Belén Paileman</span></strong>.</p>
+
+  </div>
+</footer>
+
+
+
+
+<script src="./js/sweetalert.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+ <script src="./js/modal.js"></script>
+ <script src="./js/main.js"></script>
+</body>
+</html>

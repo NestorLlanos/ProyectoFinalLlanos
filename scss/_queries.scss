@@ -1,0 +1,27 @@
+@media (max-width: 800px){
+ 
+  
+    
+  .sectioncard{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center
+       
+  }
+    
+  .footer-top{
+      
+    text-align: center;
+  }
+  .titulo{
+    font-size: small;
+  }
+  .lista-footer {
+    display: table; 
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+}

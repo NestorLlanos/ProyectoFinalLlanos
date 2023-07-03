@@ -1,0 +1,380 @@
+/*Variables*/
+/*fonts sizes*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*estilos generales*/
+@font-face {
+  font-family: "Lora";
+  src: url(../fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+.btn {
+  background-color: #557686;
+  border-color: #557686;
+}
+.btn:hover {
+  background-color: hsl(196, 38%, 69%);
+  border-color: hsl(196, 38%, 69%);
+}
+
+body {
+  font-family: "amsterdam-three-slant";
+  src: url(./fonts/amsterdam-three-slant.ttf);
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #070707;
+  background-color: #EEE9DA;
+  align-content: center;
+}
+body header .logo {
+  width: 70px;
+  height: 70px;
+}
+body header .imgbanner {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+body header .carousel-item img.custom {
+  height: 500px;
+  object-fit: cover;
+}
+body header .navbar {
+  background: #6096B4;
+}
+body header .navbar .logo {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.5rem;
+  width: 60px;
+  height: 60px;
+}
+body header .navbar ul {
+  display: flex;
+  align-items: flex-start;
+}
+body header .navbar ul li {
+  font-family: "Lora";
+  src: url(../fonts/Lora/Lora-VariableFont_wght.ttf);
+  font-size: 18px;
+}
+body header .navbar ul li a {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 20px 20px 0px 0px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+}
+body header .navbar ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #262626;
+  border-bottom: 2px solid #262626;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+body header .navbar ul li a:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+body header .navbar ul li a:hover {
+  color: #fff;
+}
+body header .navbar ul li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+body header .navbar ul li a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+body .container {
+  padding: 15px;
+}
+body .container .centrado {
+  text-align: center;
+  padding: 40px 0px 40px 0px;
+}
+body .container .centrado h1 {
+  display: inline;
+  padding: 10px;
+  margin-inline: 10px;
+  color: rgb(11, 7, 17);
+}
+body .container .sectioncard {
+  display: flex;
+  margin: 20px 30px 10px 10px;
+  text-align: center;
+  align-items: center;
+}
+body .container .sectioncard .card {
+  margin: 5px;
+  background-color: #BDCDD6;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+body .container .sectioncard .card:hover {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.46) 0 20px 40px 0, inset white 0 0 0 6px;
+}
+body .container .sectioncard img.custom {
+  object-fit: cover;
+  height: 28rem;
+  border-color: hsl(196, 38%, 69%);
+}
+body .section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  font-size: large;
+}
+body .section2 .pedidos {
+  background: #BDCDD6;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.07);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+  border-radius: 15px;
+}
+body .sectionbelen {
+  display: flex;
+  text-align: center;
+  margin: 10px;
+}
+body .sectionbelen .cardbelen {
+  padding: 10px;
+  background-color: #BDCDD6;
+  border-radius: 20px;
+  font-family: "Lora";
+  src: url(./fonts/Lora/Lora-VariableFont_wght.ttf);
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 30px 0;
+  border-radius: 10px;
+}
+body .sectionbelen .cardbelen .centrado {
+  text-align: center;
+  padding: 40px 0px 20px 0px;
+}
+body .sectionbelen .cardbelen img {
+  padding: 3px;
+  margin: 10px;
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.36) 0 10px 10px 0;
+  transform: perspective(600px);
+  transform-style: preserve-3d;
+}
+body .sectionbelen .cardbelen img:hover {
+  width: 310px;
+  height: 410px;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+}
+body .cardproductos {
+  display: flex;
+  background: #BDCDD6;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 30px 0;
+  border-radius: 10px;
+  align-content: center;
+  align-items: center;
+}
+body .cardproductos .btn1 {
+  margin-right: 20px;
+}
+body .cardproductos button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+body .cardproductos button.leer-mas {
+  width: 12rem;
+  height: auto;
+}
+body .cardproductos button.leer-mas .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+body .cardproductos button.leer-mas .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+body .cardproductos button.leer-mas .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+body .cardproductos button.leer-mas .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+body .cardproductos button.leer-mas .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .cardproductos button:hover .circle {
+  width: 100%;
+}
+body .cardproductos button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+body .cardproductos button:hover .button-text {
+  color: #fff;
+}
+body .promo {
+  padding-bottom: 15px;
+}
+body .promo .promo1 {
+  box-shadow: rgba(0, 0, 0, 0.6) 0 30px 30px 0;
+  border-radius: 10px;
+}
+body .contact {
+  padding: 20px;
+}
+body .contact .container {
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 30px 0;
+  border-radius: 10px;
+}
+body .contact .container .row {
+  background-color: #BDCDD6;
+  border-radius: 10px;
+}
+body .contact .btn1 {
+  margin-bottom: 15px;
+}
+body .imgprod {
+  height: 280px;
+  object-fit: cover;
+}
+body .carousel-item .custom2 {
+  object-fit: cover;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.footer-top {
+  background-color: #6096B4;
+}
+.footer-top a:hover {
+  font: bold;
+  font-size: smaller;
+  color: rgb(249, 252, 252);
+}
+.footer-top .footer-links i {
+  font-size: xx-large;
+}
+.footer-top .footer-links .ifoo {
+  font-size: large;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  background-color: #557686;
+  padding-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .sectioncard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .footer-top {
+    text-align: center;
+  }
+  .titulo {
+    font-size: small;
+  }
+  .lista-footer {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
