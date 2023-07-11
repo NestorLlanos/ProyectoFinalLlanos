@@ -41,18 +41,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()    
+    finalizar()    
 })
 
+const finalizar = () => {
+    localStorage.clear("carrito");
+    contenedorCarrito.innerHTML = ""
+    const divVacio = document.createElement("div")
+    divVacio.cassName = ("carritoVacio")
+    divVacio.innerHTML= ` <h2>Sin productos</h2> `
+    contenedorCarrito.appendChild(divVacio)
+    contadorCarrito.innerText = 0
+    precioTotal.innerText = 0
+}
+
 botonConfirmar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()  
+     
     Swal.fire({
         icon: 'success',
         title: 'Compra exitosa',
         text: 'Puedes seguir comprando',
-      })
-    
+    })
+    .then((result) => {
+        if (result.isConfirmed){
+            finalizar()
+        }
+    })
 })
 
 
@@ -126,7 +140,7 @@ const eliminarDelCarrito = (prodId) => {
     const indice = carrito.indexOf(item) 
 
     carrito.splice(indice, 1) 
-    actualizarCarrito() 
+    finalizar() 
     
 }
 
