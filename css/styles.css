@@ -32,9 +32,9 @@ h2{
 #boton-carrito {
     border: none;
     color: royalblue;
-    font-size: 30px;
+    font-size: 15px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 45%;
     padding: 10px 20px;
     transition: all .3s;
 }

@@ -45,19 +45,14 @@
             <li class="nav-item">
               <a class="nav-link" href="">Contacto</a>
             </li>
-            
           </ul>
 
         </div>
-        <!-- <a class="navbar-brand" href="../index.html">
-        <img class="logo navbar-brand" src="./media/Belén Paileman logo.png" alt="Belén Paileman logo">
-      </a> -->
-      <button id="boton-carrito"><i class='bx bxs-shopping-bag'></i><span id="contadorCarrito">0</span></button>
+        <button id="boton-carrito"><i class='bx bxs-shopping-bag'></i><span id="contadorCarrito">0</span></button>
+      
       
       </div>
     </nav>
-    
-    
     
   </header>
 
@@ -65,18 +60,10 @@
 
 
 <main>
+  
   <h1>Belén Paileman</h1>
   <h2>Pastelería</h2>
-  <div class="row">
-    <div class="col-4">      
-      <form class="d-flex" role="search">
-        <input class="form-control me-6 buscar" type="search" placeholder="Producto" aria-label="Search">
-        <button class="btn bx bx-search" type="submit"></button>
-      </form>
-    </div>
-    
-    
-  </div>
+
 
   
   <section id="contenedor-productos">
@@ -88,6 +75,7 @@
              
           </div>
           <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+          <p id="footer-carrito"></p>
           <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
           <button id="confirmar-compra" class="boton-confirmar">Confirmar compra</button>
       </div>
@@ -95,25 +83,7 @@
   </section>
 
 
-  <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Pronto recibirás tu pedido</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 </main>
 
 

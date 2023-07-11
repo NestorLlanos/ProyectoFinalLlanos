@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
+    
 })
 
 botonConfirmar.addEventListener('click', () => {
@@ -53,6 +54,7 @@ botonConfirmar.addEventListener('click', () => {
         title: 'Compra exitosa',
         text: 'Puedes seguir comprando',
       })
+    
 })
 
 
@@ -127,8 +129,10 @@ const eliminarDelCarrito = (prodId) => {
 
     carrito.splice(indice, 1) 
     actualizarCarrito() 
-    console.log(carrito)
+    
 }
+
+
 
 const actualizarCarrito = () => {
     
@@ -152,14 +156,8 @@ const actualizarCarrito = () => {
     
     contadorCarrito.innerText = carrito.length 
     
-    console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     
-
 }
 
-//Búsqueda
-search.addEventListener("input", () => {
-    let busqueda = filtrar(producto, search.value, "nombre");
-    crearHtml(busqueda);
-  });
+
