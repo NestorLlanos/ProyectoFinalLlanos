@@ -17,14 +17,11 @@ let stockProductos = [
 
 const contenedorProductos = document.getElementById('contenedor-productos')
 
-
-
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 const botonVaciar = document.getElementById('vaciar-carrito')
 
 const botonConfirmar = document.getElementById('confirmar-compra')
-
 
 const contadorCarrito = document.getElementById('contadorCarrito')
 
@@ -44,11 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
-    
+    actualizarCarrito()    
 })
 
 botonConfirmar.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito()  
     Swal.fire({
         icon: 'success',
         title: 'Compra exitosa',
@@ -66,8 +64,8 @@ stockProductos.forEach((producto) => {
     div.innerHTML = `
     <img src=${producto.img} >
     <h4>${producto.nombre}</h4>
-    <p>${producto.categoria}</p>
-    <p>Descripción: ${producto.desc}</p>
+    <p><strong> Categoría: </strong> ${producto.categoria}</p>
+    <p><strong> Descripción: </strong>${producto.desc}</p>
     <p class="precioProducto">Precio:$ ${producto.precio}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
 
